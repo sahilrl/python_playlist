@@ -3,6 +3,11 @@ class Composition:
     def __init__(self, path, name):
         self.name = name
         self.path = path
+        self.full = f"{path}\\{name}"
+
+    def __str__(self):
+        return self.full
+
 
 
 class LinkedListItem:
