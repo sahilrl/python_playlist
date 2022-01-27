@@ -1,6 +1,9 @@
-<script src="/path/to/howler.js"></script>
-<script>
-    var sound = new Howl({
-      src: ['sound.webm', 'sound.mp3']
-    });
-</script>
+
+var audio = new Audio(thepath);
+function songplay() {
+  console.log(thepath)
+  audio.play();
+}
+function songpause() {
+  audio.pause();
+}
