@@ -1,8 +1,10 @@
-from linked_list import Composition, LinkedList
+from .linked_list import Composition, LinkedList
 from pygame import mixer
 from mutagen.mp3 import MP3
 import time
 path = "C:\\Users\\sahil\\Music\\playlist"
+
+
 class Playlist(LinkedList):
     def __init__(self, name = 'New Playlist'):
         super().__init__()
@@ -44,7 +46,10 @@ class Playlist(LinkedList):
 
         
     def next_track(self):
+        print(self.current)
         self.current = self.current.next_item
+        print(self.current)
+        self.play(self.current)
         return self.current
     
 
@@ -53,9 +58,3 @@ class Playlist(LinkedList):
         return self.current
         
 
-if __name__ == '__main__':
-    obj = Playlist() 
-    obj.add(path, "que_pena.mp3")
-    obj.add(path, "brown_munde.mp3")
-    obj.add(path, "tutu.mp3")
-    obj.play_all()

@@ -1,0 +1,13 @@
+h1 {
+    color: aqua;
+}
+.buttons .iconify{
+    display: flex;
+    color: #fff;
+    font-size: 50px;
+    align-items: center;
+    float: left;
+}
+body {
+    background-color: black;
+}
