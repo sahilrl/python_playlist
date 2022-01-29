@@ -12,21 +12,13 @@
     <title>Woofer</title>
   </head>
   <body>
-    <h1>Woofer</h1>
-    <script type="text/javaScript">
-      var thepath = "{% get_media_prefix %}all_songs/{{title}}";
-      // console.log('{{ thepath }}')
-    </script>
-    <h1>{{ thepath }}</h1>>
-    <div class= "buttons">
-      <div class = "backward"><span class="iconify" data-icon="ant-design:step-backward-filled"></span></div>
-      <div class = "play" onclick = "songplay()"><span class="iconify" data-icon="ci:play-arrow"></span></div>
-      <div class = "pause" onclick = "songpause()"><span class="iconify" data-icon="akar-icons:pause"></span></div>
-      <div class = "forward"><span class="iconify" data-icon="ant-design:step-forward-filled"></span></div>
-    </div>
-
-    <!-- Optional JavaScript; choose one of the two! -->
-
+    <h1>Add Music</h1>
+    <form action="{% url 'add_song'%}" method="post" enctype="multipart/form-data">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Submit">
+    </form>
+    
     <!-- Option 1: Bootstrap Bundle with Popper -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
 

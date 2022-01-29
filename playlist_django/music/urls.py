@@ -19,7 +19,7 @@ from . import views
 
 urlpatterns = [
     path('', views.home),
-    path('play', views.play, name='play'),
+    path('add-music-in-playlist/', views.add_song, name='add_song'),
     # path('', views.home),
     # path('', views.home),
 ]
